@@ -14,6 +14,12 @@ Route::get('/sessions/list',[SessionsController::class,'index']);
 Route::get('/sessions/create', [SessionsController::class,'create']);
 Route::post('/sessions/save',[SessionsController::class,'save']);
 
+Route::get('/sessions/edit/{pos}', [SessionsController::class,'edit']);
+Route::put('/sessions/update/{pos}',[SessionsController::class,'update']);
+
+Route::get('/sessions/show', [SessionsController::class,'show']);
+Route::delete('/sessions/delete/{pos}',[SessionsController::class,'destroy']);
+
 
 Route::get('/cookies/list',[CookiesController::class,'index']);
 Route::get('/cookies/create', [CookiesController::class,'create']);
