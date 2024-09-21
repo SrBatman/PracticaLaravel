@@ -18,12 +18,54 @@ Route::get('/sessions/edit/{pos}', [SessionsController::class,'edit']);
 Route::put('/sessions/update/{pos}',[SessionsController::class,'update']);
 
 Route::get('/sessions/show', [SessionsController::class,'show']);
-Route::delete('/sessions/delete/{pos}',[SessionsController::class,'destroy']);
+Route::delete('/sessions/delete/{pos}',[SessionsController::class,'delete']);
+Route::put('/sessions/encrypt/{pos}',[SessionsController::class,'encrypt']);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Route::get('/cookies/list',[CookiesController::class,'index']);
 Route::get('/cookies/create', [CookiesController::class,'create']);
 Route::post('/cookies/save',[CookiesController::class,'save']);
+
+
+Route::get('/cookies/edit/{pos}', [CookiesController::class,'edit']);
+Route::put('/cookies/update/{pos}',[CookiesController::class,'update']);
+Route::put('/cookies/encrypt/{pos}',[CookiesController::class,'encrypt']);
+
+Route::get('/cookies/show', [CookiesController::class,'show']);
+Route::delete('/cookies/delete/{pos}',[CookiesController::class,'delete']);
+Route::delete('/cookies/destroy',[CookiesController::class,'destroy']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Route::get('/encryptions/list',[EncryptionsController::class,'index']);
